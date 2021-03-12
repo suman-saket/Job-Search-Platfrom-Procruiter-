@@ -1,0 +1,195 @@
+.home-left, .home-right {
+  width: 50%;    
+  height: 370px;
+  float: left;
+  background: url('/files/team-meeting.jpg') center no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.home-right {
+  background: url('/files/office-freelancer.jpg');
+  background-size: cover;
+}
+
+.buttons-column > .row .col  {
+  border: none; 
+  text-align: right;
+}
+
+.buttons-column > .row .col form:hover  {
+  background: none;
+}
+
+.home-left .btn.btn-primary, .home-right .btn.btn-primary {
+  border-radius: 5px 0 0 5px;
+}
+
+.top-companies.row img {
+  width: 150px;
+}
+
+.col.tc-images {
+  border: none;
+}
+
+.logo-column {
+  width: 60%;
+  float: left;
+}
+
+.buttons-column {
+  width: 40%;
+  float: left;
+}
+
+.row, .app-table, .hbs, .footer {
+  margin-top: 30px;
+} 
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-item:hover{
+  background-color: #007BFF;
+} 
+
+.navbar-item > a:hover{
+  color: white !important;
+}
+
+.dropdown-item {
+  margin-top: 5px;
+}
+
+.dropdown-item.nobtn:hover {
+  background-color: #007BFF; 
+  color: white;
+}
+
+.footer {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.row {
+  text-align: center;
+}
+
+.col {
+  border: 10px solid #f8f9fa;
+  margin: auto;
+}
+
+.number {
+  font-size: 5vw;
+}
+
+.col > p {
+  margin-top: 10px;
+}
+
+.notfound {
+  width: 100%;
+  height: auto;
+  background-color: #f8f9fa;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.search-cont {
+  width: 300px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.search-cont .search {
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  padding: 8px;
+}
+
+.main-display {
+  font-size: 5vmax;
+}
+
+.sec-display {
+  font-size: 3vmax;
+}
+
+.delete-btn {
+  margin-left: 15px;
+}
+
+.userintro {
+  margin-top: 30px;
+}
+
+.dropdown-menu.show {
+  left: -102px !important;
+}
+
+p.display-4.col-8 {
+  font-size: 20px; 
+  border: none; 
+  padding-top: 15px;
+  text-align: right;
+  max-width: 65.666667%;
+}
+
+#main-form > .row > .form-group {
+  border: none;
+}
+
+.row.jobupdate, .row.userdetails {
+  text-align: left;
+}
+
+#job-id-apply {
+  font-size: 1.5vmax;
+  background-color: #E9ECEF;
+  border: 1px solid rgb(199, 202, 204);
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+.row > #search-jobs-btn {
+  margin: auto;
+}
+
+@media (max-width: 770px) {
+  .delete-btn {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+
+  .logo-column, .buttons-column {
+    width: 100%;
+  }
+
+  .top-companies.row img {
+    margin-top: 40px;
+  }
+
+  .home-left, .home-right { 
+    width: 100%;
+    height: 185px;
+    margin-top: 30px;
+  }
+
+  p.display-4.col-8 {
+    margin: auto;
+  }
+
+  .buttons-column > .row .col  {
+    border: none; 
+    text-align: center;
+    padding-top: 10px;
+}
+}

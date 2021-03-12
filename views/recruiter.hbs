@@ -1,0 +1,70 @@
+<div class="userintro container">
+    <p class="display-4" style="font-size: 2.5vmax; text-align: center;">Welcome to your dashboard, {{name}}! Here's what's going on!</p>
+  </div>
+{{!-- <div class="row container glance" style="margin-left: 0px;padding-left: 0px;padding-right: 0px;">
+  <div class="col">
+    <p>Total Jobs Posted</p>
+    <p class="number">10</p>
+  </div>
+  <div class="col">
+    <p>Applications Received</p>
+    <p class="number">25</p>
+  </div>
+  <div class="col">
+      <p>Processed Applications</p>
+    <p class="number">15</p>
+  </div>
+  <div class="col">
+      <p>Pending Applications</p>
+    <p class="number">10</p>
+  </div>
+</div> --}}
+{{!-- <div class="row">
+        <p class="display-4 col" style="font-size: 2vmax; text-align: center; margin-top: 30px; border: none;">Your Unique ID: <span id="job-id-apply">{{ID}}</span></p>
+    </div> --}}
+<p class="display-4" style="font-size: 2vmax; text-align: center; margin-top: 30px;">Looking for Top Talent? Post a New Job Below:</p>
+{{{jobsuccess}}}
+<form id="main-form" action="/jobpost/create" method="post">
+    <div class="row">
+    <div class="form-group col">
+        <input id="companyName" class="form-control" type="text" name="companyName" placeholder="Company" required>
+    </div>
+    <div class="form-group col">
+        <input id="jobTitle" class="form-control" type="text" name="jobTitle" placeholder="Role">
+    </div>
+    <div class="form-group col">
+        <input id="joblocation" class="form-control" type="text" name="joblocation" placeholder="Location">
+    </div>
+    <div class="form-group col">
+        <input id="salary" class="form-control" type="text" name="salary" placeholder="Salary">
+    </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <textarea id="jobDescription" class="form-control" type="text" name="jobDescription" placeholder="Job Description" required></textarea>
+    </div>
+    </div>
+    <input id="userID" type="hidden" name="userID" value="{{userID}}">
+    <input id="name" type="hidden" name="name" value="{{name}}">
+    <input type="submit" value="Post" class="btn btn-primary btn-lg" style="margin-top: 30px;">
+    </form>
+
+ <p class="display-4" style="font-size: 2vmax; text-align: center; margin-top: 30px;">Recent Jobs Posted by You:</p>
+    <div class="app-table">
+    <table id="recent-jobs" class="table table-bordered table-striped">
+      <tr class="thead-dark">
+        <th>Role</th>
+        <th>Company</th>
+        <th>Salary Range</th>
+        <th>Actions</th>
+      </tr>
+      {{#each applicationData}}
+    <tr>
+        <td id="jTitle" value="{{this._id}}">{{this.jobTitle}}</td>
+        <td id="cName">{{this.companyName}}</td>
+        <td id="sal">{{this.salary}}</td>
+        <td style="text-align: center;">{{{../actions}}}</td>
+    </tr>
+    {{/each}}
+    </table>
+ </div>

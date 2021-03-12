@@ -1,0 +1,23 @@
+<div class="container">
+      <div id="cardbody" style="border: 1px solid rgb(245, 237, 237);">  
+       <div class="card-body">
+         <p class="display-4" style="font-size: 35px;">Reset Password</p>
+<div class="form-group">
+    {{{invalidToken}}}
+    {{{noAccount}}}
+    {{{mailSent}}}
+</div>
+        <form action="/auth/forgot-password" method="POST">
+        <div class="form-group">
+            <p class="display-6" style="margin-top: 30px;">Forgot your password? Don't worry. It happens to the best of us! Just enter your registered email below and we'll help you reset it in no time.</p>
+        </div>
+        <div class="form-group" style="margin-top: 30px;">
+            <input type="email" class="form-control" name ="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Reset Password">
+        </div>
+        </form>
+    </div>
+</div>
+</div>

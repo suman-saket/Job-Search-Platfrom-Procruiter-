@@ -1,0 +1,36 @@
+<div class="container">
+    <p class="display-4" style="font-size: 2vmax; text-align: center; margin-top: 30px;">View or Edit Your Job Post Below:</p>
+    {{{updatesuccess}}}
+    <div class="row">
+        <div class="col" style="text-align: right; border: none;">Job ID:</div>
+        <div class="col-3" style="border: none;"><input id="disabledInput" class="form-control" type="text" value="{{ID}}" disabled></div>
+    </div>
+    <input id="name" type="hidden" name="name" value="{{name}}">
+<form id="main-form" onsubmit="return false">
+    <div class="row jobupdate">
+    <div class="form-group col">
+        <label for="companyName" style="text-align: left">Company:</label>
+        <input id="companyName" class="form-control" type="text" name="companyName" placeholder="Company" value="{{data.companyName}}" required>
+    </div>
+    <div class="form-group col">
+        <label for="jobTitle" style="text-align: left">Role:</label>
+        <input id="jobTitle" class="form-control" type="text" name="jobTitle" placeholder="Role" value="{{data.jobTitle}}" required>
+    </div>
+    <div class="form-group col">
+        <label for="joblocation" style="text-align: left">Location:</label>
+        <input id="joblocation" class="form-control" type="text" name="joblocation" placeholder="Location" value="{{data.joblocation}}" required>
+    </div>
+    <div class="form-group col">
+        <label for="salary" style="text-align: left">Salary:</label>
+        <input id="salary" class="form-control" type="text" name="salary" placeholder="Salary" value="{{data.salary}}" required>
+    </div>
+    </div>
+    <div class="row jobupdate">
+      <div class="form-group col">
+        <label for="jobDescription" style="text-align: left">Job Description:</label>
+        <textarea id="jobDescription" class="form-control" type="text" name="jobDescription" placeholder="Job Description" required>{{data.jobDescription}}</textarea>
+    </div>
+    </div>
+    <button style="margin-top: 30px;" class='btn btn-success' onclick='jobUpdate()'>Update</button>
+    </form>
+</div>

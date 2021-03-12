@@ -1,0 +1,30 @@
+<h2>Edit your profile</h2>
+<form action="/users" method="POST">
+  <div class="form-group">
+    <label for="name">User Name:</label>
+    <input type="text" class="form-control" name="name" id="name" value="{{ name }}">
+  </div>
+   <div class="form-group">
+    <label for="name">User Post:</label>
+    <input type="text" class="form-control" name="user post" id="user post" value="{{ user post }}">
+  </div>
+  <div class="form-group">
+    <label for="name">About:</label>
+    <input type="text" class="form-control" name="about" id="about" value="{{ about }}">
+  </div>
+  <div class="form-group">
+    <label for="name">Experience:</label>
+    <input type="text" class="form-control" name="experience" id="experience" value="{{ experience }}">
+  </div>
+  <div class="form-group">
+    <label for="name">Skills & Endorsements:</label>
+    <input type="text" class="form-control" name="skills" id="skills" value="{{ skills }}">
+  </div>
+  <div class="form-group">
+    <label for="name">Education</label>
+    <input type="text" class="form-control" name="education" id="education" value="{{ education }}">
+  </div>
+  <button class="btn btn-primary">Update</button>
+</form>
+
+<p><a href="/users/{{username}}" target="_blank">View your profile</a></p>

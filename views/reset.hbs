@@ -1,0 +1,21 @@
+<div class="container">
+      <div id="cardbody" style="border: 1px solid rgb(245, 237, 237);">  
+       <div class="card-body">
+         <p class="display-4" style="font-size: 35px;">Reset Password</p>
+<div class="form-group">
+    {{{passNoMatch}}}
+</div>
+		<form action="/auth/reset/{{token}}" method="POST">
+		  <div class="form-group">
+		    <input type="password" name="password" value="" placeholder="New Password" autofocus="autofocus" class="form-control"/>
+		  </div>
+		  <div class="form-group">
+		    <input type="password" name="confirm" value="" placeholder="Confirm Password" class="form-control"/>
+		  </div>
+		  <div class="form-group">
+		    <input type="submit" class="btn btn-primary" value="Reset Password">
+		  </div>
+		</form>
+	</div>
+</div>
+</div>

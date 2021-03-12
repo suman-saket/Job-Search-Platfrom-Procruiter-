@@ -1,0 +1,55 @@
+<div class="container">
+      <div id="cardbody" style="border: 1px solid rgb(245, 237, 237);">  
+       <div class="card-body">
+         <p class="display-4" style="font-size: 35px;">Create Account</p>
+  <div class="form-group">
+  {{{userNotFound}}}
+  </div>
+  <form class="signup-form" action="/auth/sign-up" method="post" onsubmit="return checkForm()" id="mainform">
+  <div class="form-group">
+  <p class="errormsg" style="text-align: center; color: white;"></p>
+  </div>
+    <div class="radio form-group">
+      <p class="display-6">Are you a Recruiter or a Job Seeker?</p>
+  <input type="radio" name="accountType" value="recruiter" id="recruiter" checked>
+  <label for "recruiter">Recruiter</label>
+  &nbsp;
+  <input type="radio" name="accountType" value="jobseeker" id="jobseeker">
+  <label for "jobseeker">Job Seeker</label>
+  </div>
+        <div class="form-group">
+             <input type="text" class="form-control fname" name="firstName" placeholder="First Name" required>
+             </div>
+             <div class="form-group">
+             <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+             </div>
+             <div class="form-group">
+             <input type="email" class="form-control email" name ="email" placeholder="Email" required>
+             </div>
+             <div class="form-group">
+             <input type="text" class="form-control" name ="phoneNumber" placeholder="Phone Number" required>
+             </div>
+             <div class="form-group">
+             <input type="password" class="form-control pass" name= "password" placeholder="Password" required>
+             </div>
+             <div class="form-group">
+             <input type="password" class="form-control confpass" name="confirmPassword" placeholder="Confirm Password" required>
+        </div>
+        
+        <input type="submit" value="Create an Account" class="subajax btn btn-primary btn-lg">
+
+        <!-- Uncomment it after implementing social login -->
+
+        {{!-- <p style="text-align: center;" class="display-6">or</p>
+        <div style="text-align: center; margin-top: 10px;">
+          <button type="submit" class="google"></button>
+          <button type="submit" class="linkedin"></button>
+          </div> --}}
+
+          <!-- Uncomment it after implementing social login -->
+  </form>
+      </div>
+    </div>
+    </div>
+  
+    

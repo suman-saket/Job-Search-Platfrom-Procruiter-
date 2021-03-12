@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <p class="display-4 col" style="font-size: 2vmax; text-align: center; margin-top: 30px; border: none;">Applications Received for Job ID: <span id="job-id-apply">{{ID}}</span></p>
+    </div>
+    <input id="recID" type="hidden" name="recID" value="{{userID}}">
+    <div class="app-table">
+      {{{shortlisted}}}
+    <table id="available-jobs" class="table table-bordered table-striped">
+      <tr class="thead-dark">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Resume</th>
+        <th>Actions</th>
+      </tr>
+      {{#each appsReceivedData}}
+    <tr>
+        <td id="name" value="{{this._id}}">{{this.firstName}} {{this.lastName}}</td>
+        <td id="email">{{this.email}}</td>
+        <td id="phoneNumber">{{this.phoneNumber}}</td>
+        <td id="resume"><a target="_blank" href="/{{this.resume}}">View Resume</a></td>
+        <td style="text-align: center;">{{{../actions}}}</td>
+    </tr>
+    {{/each}}
+    </table>
+    <div class="row">
+    {{#if noMatch}}
+      <p class="display-4 col" style="font-size: 2vmax; text-align: center; margin-top: 30px; border: none;">{{this.noMatch}}</p>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,42 @@
+{
+  "name": "eagle-job-engine",
+  "version": "1.0.0",
+  "description": "Project repo for Team 11",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attainu/eagle-job-engine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attainu/eagle-job-engine/issues"
+  },
+  "homepage": "https://github.com/attainu/eagle-job-engine#readme",
+  "dependencies": {
+    "async": "^3.1.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.17.0",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.11",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.3.1",
+    "request": "^2.88.0"
+  }
+}

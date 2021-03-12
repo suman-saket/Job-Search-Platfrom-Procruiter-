@@ -1,0 +1,48 @@
+<div class="container">
+<div class="form-group">
+{{{loggedoutmsg}}}
+</div>
+<div class="home-left" style="border: none; position: relative">
+    <a href="/sign-up"><button class='homepage-btn btn btn-primary' style="border: none; position: absolute; bottom: 15px; right: 0;">Sign Up as a Recruiter</button></a>
+</div>
+<div class="home-right" style="border: none; position: relative">
+    <a href="/sign-up"><button class='homepage-btn btn btn-primary' style="border: none; position: absolute; bottom: 15px; right: 0;">Sign Up as a Job Seeker</button></a>
+</div>
+<p class="display-4" style="font-size: 30px; text-align: center;">Top Companies:</p>
+<div class="top-companies row">
+    <div class="col tc-images"><img src="/files/facebook.png" /></div>
+    <div class="col tc-images"><img src="/files/google.png" /></div>
+    <div class="col tc-images"><img src="/files/samsung.png" /></div>
+    <div class="col tc-images"><img src="/files/github.png" /></div>
+    <div class="col tc-images"><img src="/files/infosys.png" /></div>
+</div>
+
+<p class="display-4" style="font-size: 30px; text-align: center; margin-top: 30px;">Latest Jobs Posted:</p>
+<div class="search-cont">
+    <form action="/#allavailablejobs" method="GET">
+        <input class="search" type="search" name = "search" placeholder="Search for your dream job!">
+        <button type="submit" class="btn btn-primary" value = "Search" style="margin-top: -7px;">Search</button>
+        </form>
+        </div>
+      {{#each applicationData}}  
+    <div class="card" style="width: 100%; height: auto; margin: 10px auto;">
+      <div id="cName" class="card-header">
+        &#x1F3E2 {{this.companyName}}
+      </div>
+      <div id="recent-jobs" class="card-body">
+        <h5 id="jTitle" value="{{this._id}}" class="card-title">&#x1F4BC {{this.jobTitle}}</h5>
+        <p id="jDesc" class="card-text">&#x1F4D6 {{this.jobDescription}}</p>
+        <p id="sal" class="card-text">&#x1F4B5 {{this.salary}}</p>
+        {{{../actions}}}
+      </div>
+    </div>
+    {{/each}}
+    <div id="allavailablejobs" class="row">
+    {{#if noMatch}}
+      <p id="results" class="display-4 col" style="font-size: 2vmax; text-align: center; margin-top: 30px; border: none;">{{this.noMatch}}</p>
+      {{/if}}
+    </div>
+    <div class="row">
+      <div class="col" style="border: none; margin-top: 15px;">{{{allJobs}}}</div>
+      </div>
+    </div>

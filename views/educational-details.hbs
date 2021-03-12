@@ -1,0 +1,146 @@
+ <div class="container">
+            <div id="cardbody" style="border: 1px solid rgb(245, 237, 237);">  
+             <div class="card-body">
+               <p class="display-4" style="font-size: 35px;"></p>      
+      
+        <form action="/auth/sign-up" method="post">
+          
+              <div class="form-group">
+                <p class="errormsg"></p>
+              </div>
+
+              <form class="form-horizontal" action='' method="POST">
+                <fieldset>
+                  <div id="legend">
+                    <legend class="">Education</legend>
+                  </div>
+
+              
+                  <fieldset>
+                    <label>Education</label>
+                    <select class="form-control dropdown" id="education" name="education">
+                      <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                      <option value="No formal education">No formal education</option>
+                      <option value="Primary education">Primary education</option>
+                      <option value="Secondary education">Secondary education or high school</option>
+                      <option value="GED">GED</option>
+                      <option value="Vocational qualification">Vocational qualification</option>
+                      <option value="Bachelor's degree">Bachelor's degree</option>
+                      <option value="Master's degree">Master's degree</option>
+                      <option value="Doctorate or higher">Doctorate or higher</option>
+                    </select>
+                  </fieldset>
+                   
+                <!--Courses-->
+                   <fieldset>
+                    <label>Courses</label>
+                    <select class="form-control dropdown" id="courses" name="courses">
+                      <option value="" selected="selected" disabled="disabled">-- select Courses --</option>
+                      <option value="MCA">MCA</option>
+                      <option value="MA">MA</option>
+                      <option value="BA">BA</option>
+                      <option value="BCA">BCA</option>
+                      <option value="BCOM">BCOM</option>
+                      <option value="M-Phil">M-Phil</option>
+                      <option value="Btech">Btech</option>
+                      <option value="Mtech">Mtech</option>
+                    </select>
+                  </fieldset>
+
+        
+
+                    <!--University/College-->
+                    <fieldset>
+                      <label>University/College</label>
+                      <select class="form-control dropdown" id="University/College" name="University/College">
+                        <option value="" selected="selected" disabled="disabled">-- select University/College --</option>
+                      <option value="IIT MUMBAI">IIT MUMBAI</option>
+                      <option value="IIT KANPUR">IIT KANPUR</option>
+                      <option value="NIT KRUKSHETERA">NIT KRUKSHETERA</option>
+                      <option value="NIT CALICUT">NIT CALICUT</option>
+                      <option value="MNIT ALLAHABAD">MNIT ALLAHABAD</option>
+                      <option value="VIT VELLORE">VIT VELLORE</option>
+                      <option value="JAIN UNIVERSITY">JAIN UNIVERSITY</option>
+                      <option value="CSJM UNIVERSITY">CSJM UNIVERSITY</option>
+                    </select>
+                    </fieldset>
+                   
+
+
+                      <!--PassingYear-->
+
+
+                      <fieldset>
+                        <label>Course Complete Year</label>
+                        <select class="form-control dropdown" id="Course Complete Year" name="Course Complete Year">
+                          <option value="" selected="selected" disabled="disabled">-- select Course Complete Year --</option>
+                          <option value = "2015" >2015</option>
+                          <option value = "2016" >2016</option>
+                          <option value = "2017" >2017</option>
+                          <option value = "2018" >2018</option>
+                          <option value = "2019" >2019</option>
+                          <option value = "2020">2020</option>
+                        </select>
+                      </fieldset>
+
+                    
+                   <br>
+                   
+                   <form action="/submit" method="post" enctype="multipart/form-data">
+                      <label for="avatar">Resume Upload</label>
+                      <br>
+                    <input type = "file"  placeholder="resumeupload" name = "avatar" id="avatar">
+                 </form>
+                 <br>
+                 <br>
+                   <div class="form-group">
+                      <label>Skills</label>
+                   <input type="skills" class="form-control" name="skills" placeholder="Skills" required>
+              </div>
+              <div class="form-group">
+                  <label>Role</label>
+                <input type="role" class="form-control" name="role" placeholder="Role" required>
+           </div>
+
+
+                <!--Preferred WorkLocation-->
+
+
+                <fieldset>
+                  <label>Preferred WorkLocation</label>
+                  <select class="form-control dropdown" id="Preferred WorkLocation" name="Preferred WorkLocation">
+                    <option value="" selected="selected" disabled="disabled">-- select Preferred WorkLocation --</option>
+                    <option value = "DELHI" >DELHI</option>
+                    <option value = "PUNE" >PUNE</option>
+                    <option value = "MUMBAI" >MUMBAI</option>
+                    <option value = "CHENNAI" >CHENNAI</option>
+                    <option value = "BANGLORE" >BANGLORE</option>
+                    <option value = "MYSORE" >MYSORE</option>
+                  </select>
+                </fieldset>
+
+           
+           
+            <!----- Date Of Birth -------------------------------------------------------->
+
+            <div class="well"> 
+                <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth">
+              </div>
+          </div>
+          
+          <div class="well"> 
+          </div>
+           <div class="form-group">
+              <label>Keyword</label>
+            <input type="Keyword" class="form-control" name="Keyword" placeholder="Keyword" required>
+       </div>
+              
+              <input type="Continue" value="Continue" class="btn btn-primary btn-lg">
+             
+        </form>
+            </div>
+          </div>
+          </div>
+        

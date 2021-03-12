@@ -1,0 +1,48 @@
+
+<div class="container">
+      <div id="cardbody" style="border: 1px solid rgb(245, 237, 237);">  
+       <div class="card-body">
+         <p class="display-4" style="font-size: 35px;">Login</p>
+         <!-- Uncomment it after implementing social login -->
+
+        {{!-- <div style="text-align: center; margin-top: 10px;">
+          <button type="submit" class="google"></button>
+          <button type="submit" class="linkedin"></button>
+          </div>
+        
+              <p style="text-align: center;" class="display-6">or</p> --}}
+
+              <!-- Uncomment it after implementing social login -->
+              
+<div class="form-group">
+  {{{message}}}
+  {{{successmsg}}}
+  {{{incorPass}}}
+  {{{noJobSeeker}}}
+  {{{noRecruiter}}}
+  {{{passChanged}}}
+  </div>
+  <form action="/auth/login" method="post">
+        <div class="radio form-group">
+          <p class="display-6">Logging in as a:</p>
+              <input type="radio" name="accountType" value="recruiter" id="recruiter" checked>
+              <label for "recruiter">Recruiter</label>
+              &nbsp;
+              <input type="radio" name="accountType" value="jobseeker" id="jobseeker">
+              <label for "jobseeker">Job Seeker</label>
+        </div>
+        <div class="form-group">
+             <input type="email" class="form-control" name ="email" placeholder="Email" value="{{userEmail}}">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control" name= "password" placeholder="Password">
+        </div>
+
+        <p>Forgot password? <a href="/forgot-password">Click here</a></p>
+        
+        <input type="submit" value="Sign In" class="btn btn-primary btn-lg">
+  </form>
+      </div>
+    </div>
+    </div>

@@ -1,0 +1,65 @@
+<div class="userintro container">
+    <p class="display-4" style="font-size: 2.5vmax; text-align: center;">Welcome to your dashboard, {{name}}! Here's what's going on!</p>
+  </div>
+{{!-- <div class="row container glance" style="margin-left: 0px;padding-left: 0px;padding-right: 0px;">
+  <div class="col">
+    <p>New Jobs Today</p>
+    <p class="number">15</p>
+  </div>
+  <div class="col">
+    <p>Total Jobs Applied</p>
+    <p class="number">10</p>
+  </div>
+  <div class="col">
+      <p>Recruiter Replies Received</p>
+    <p class="number">4</p>
+  </div>
+  <div class="col">
+      <p>Awaiting Recruiter Action</p>
+    <p class="number">6</p>
+  </div>
+</div> --}}
+<div class="search-cont">
+    <form action="/jobseeker/id/{{userID}}/name/{{name}}" method="GET">
+        <input class="search" type="search" name = "search" placeholder="Search for your dream job!">
+        <button type="submit" class="btn btn-primary" value = "Search" style="margin-top: -7px;">Search</button>
+        </form>
+        </div>
+        <input id="userID" type="hidden" name="userID" value="{{userID}}">
+<div class="app-table">
+    {{!-- <table id="available-jobs" class="table table-bordered table-striped">
+      <tr class="thead-dark">
+        <th>Role</th>
+        <th>Company</th>
+        <th>Salary Range</th>
+        <th>Actions</th>
+      </tr> --}}
+      {{#each applicationData}}
+    {{!-- <tr>
+        <td id="jTitle" appid="{{../userID}}" value="{{this._id}}">{{this.jobTitle}}</td>
+        <td id="cName">{{this.companyName}}</td>
+        <td id="sal">{{this.salary}}</td>
+        <td style="text-align: center;">{{{../actions}}}</td>
+    </tr> --}}
+    <div class="card" style="width: 100%; height: auto; margin: 10px auto;">
+      <div id="cName" class="card-header">
+        &#x1F3E2 {{this.companyName}}
+      </div>
+      <div id="recent-jobs" class="card-body">
+        <h5 id="jTitle" appid="{{../userID}}" value="{{this._id}}" class="card-title">&#x1F4BC {{this.jobTitle}}</h5>
+        <p id="jDesc" class="card-text">&#x1F4D6 {{this.jobDescription}}</p>
+        <p id="sal" class="card-text">&#x1F4B5 {{this.salary}}</p>
+        {{{../actions}}}
+      </div>
+    </div>
+    {{/each}}
+    {{!-- </table> --}}
+  <div class="row">
+    {{#if noMatch}}
+      <p class="display-4 col" style="font-size: 2vmax; text-align: center; margin-top: 30px; border: none;">{{this.noMatch}}</p>
+    {{/if}}
+  </div>
+  <div class="row">
+      <div class="col" style="border: none; margin-top: 15px;">{{{allJobs}}}</div>
+    </div>
+ </div>

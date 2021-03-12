@@ -1,0 +1,95 @@
+#cardbody{
+    width: 40vmax;
+    height: auto;
+    margin: 30px auto 0 auto;
+}
+
+.txtb{
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    border-radius: 1px;
+
+}
+
+.card{
+    width: 450px;
+    height: 565px;
+    margin-top: 10px;
+    margin-left: 505px;
+   
+}
+
+
+
+#sigin-btn{
+    background: #3B5998;
+}
+
+
+#signup-btn{
+    
+    font-size: 24px;
+    border-radius: 12px;
+    width: 80%;
+    margin-left: 28px;
+    background-color: steelblue;
+    border: 2px solid #008CBA;
+  
+
+}
+
+
+
+
+.CreateAccount-btn{
+   
+    font-size: 24px;
+    border-radius: px;
+    width: 80%;
+    margin-left: 20px;
+    background-color: steelblue
+  
+}
+
+#button{
+    margin-left: 71px;
+    margin-bottom: 15px;
+    background: #3B5998;
+   
+}
+
+.google {
+    background-image: url('/files/google-login.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 240px;
+    height: 47px;
+    border: none;
+}
+
+.linkedin {
+    background-image: url('/files/linkedin-login.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 240px;
+    height: 47px;
+    border: none;
+}
+
+@media (max-width: 1200px) {
+
+    .google {
+        width: 200px;
+        height: 40px;
+    }
+    
+    .linkedin {
+        width: 200px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+}
+
